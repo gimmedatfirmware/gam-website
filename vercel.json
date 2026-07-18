@@ -1,0 +1,7 @@
+{
+  "cleanUrls": true,
+  "redirects": [
+    { "source": "/enquiry-k9x3.html", "destination": "/onboarding", "permanent": true },
+    { "source": "/enquiry-k9x3", "destination": "/onboarding", "permanent": true }
+  ]
+}
