@@ -4,7 +4,7 @@
 
 :root {
   --cream: #faf8ee;
-  --cream-deep: #edefdc;
+  --red-tint: rgba(171, 51, 44, 0.08); /* translucent wash of the logo's brick red */
   --leaf: #4a7c3f;
   --leaf-dark: #3a6431;
   --sun: #e0a83e;
@@ -239,7 +239,7 @@ img, svg { max-width: 100%; display: block; }
 
 /* ============ Sections (shared) ============ */
 .section { padding-block: clamp(4rem, 8vw, 6.5rem); }
-.section--tint { background: var(--cream-deep); }
+.section--tint { background: var(--red-tint); }
 
 .section__head { margin-bottom: clamp(2rem, 4vw, 3.2rem); }
 .section__kicker {
@@ -283,7 +283,7 @@ img, svg { max-width: 100%; display: block; }
   gap: 1.2rem;
 }
 .fact-card {
-  background: var(--cream-deep);
+  background: var(--red-tint);
   border-radius: var(--radius);
   padding: 1.6rem 1.8rem;
   display: grid;
