@@ -94,6 +94,12 @@ img, svg { max-width: 100%; display: block; }
   text-decoration: none;
   color: var(--ink);
 }
+.nav__brand-mark img {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+}
 .nav__brand-text {
   font-family: var(--font-display);
   font-weight: 700;
