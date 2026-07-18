@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Enquiry — Glad Animal Movements</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,900&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a href="index.html" class="nav__brand">
+        <span class="nav__brand-mark" aria-hidden="true">
+          <img src="assets/logo.jpg" alt="">
+        </span>
+        <span class="nav__brand-text">Glad Animal<br>Movements</span>
+      </a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section enquiry">
+      <div class="container enquiry__inner">
+        <div class="section__head">
+          <p class="section__kicker">Project Enquiry</p>
+          <h1 class="section__title">Tell us about your project</h1>
+          <p class="enquiry__sub">A few details and we'll come back to you within one working day.</p>
+        </div>
+
+        <form id="enquiry-form" class="enquiry__form" novalidate>
+          <div class="field">
+            <label for="f-name">Your name *</label>
+            <input id="f-name" name="name" type="text" required autocomplete="name">
+          </div>
+          <div class="field">
+            <label for="f-email">Email *</label>
+            <input id="f-email" name="email" type="email" required autocomplete="email">
+          </div>
+          <div class="field">
+            <label for="f-phone">Phone</label>
+            <input id="f-phone" name="phone" type="tel" autocomplete="tel">
+          </div>
+          <div class="field">
+            <label for="f-org">Company / organisation</label>
+            <input id="f-org" name="organisation" type="text" autocomplete="organization">
+          </div>
+          <div class="field">
+            <label for="f-type">Type of project</label>
+            <select id="f-type" name="projectType">
+              <option value="">Choose one…</option>
+              <option>Corporate / promotional video</option>
+              <option>Event coverage</option>
+              <option>Biodiversity / heritage documentary</option>
+              <option>Arts / community project</option>
+              <option>Social media content</option>
+              <option>Livestream</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="f-date">Ideal delivery date</label>
+            <input id="f-date" name="deliveryDate" type="date">
+          </div>
+          <div class="field field--full">
+            <label for="f-details">Project details *</label>
+            <textarea id="f-details" name="details" rows="6" required placeholder="What's the story you want to tell? Where and when does it happen?"></textarea>
+          </div>
+          <!-- honeypot: real people never see or fill this -->
+          <div class="field field--hp" aria-hidden="true">
+            <label for="f-website">Website</label>
+            <input id="f-website" name="website" type="text" tabindex="-1" autocomplete="off">
+          </div>
+          <div class="field field--full">
+            <button type="submit" class="btn btn--primary btn--big" id="enquiry-submit">Send enquiry</button>
+            <p class="enquiry__status" id="enquiry-status" role="status"></p>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <p>© <span id="year">2026</span> Glad Animal Movements · Conor Donelan</p>
+      <p><a href="index.html">gladanimalmovements — home</a></p>
+    </div>
+  </footer>
+
+  <script>
+    const form = document.getElementById("enquiry-form");
+    const statusEl = document.getElementById("enquiry-status");
+    const submitBtn = document.getElementById("enquiry-submit");
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      if (!form.reportValidity()) return;
+
+      const data = Object.fromEntries(new FormData(form).entries());
+      submitBtn.disabled = true;
+      statusEl.textContent = "Sending…";
+
+      try {
+        const res = await fetch("/api/enquiry", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data),
+        });
+        if (!res.ok) throw new Error("Request failed: " + res.status);
+        form.reset();
+        statusEl.textContent = "Thanks! Your enquiry is on its way — we'll be in touch within one working day.";
+      } catch (err) {
+        statusEl.textContent = "Something went wrong sending the form. You can email us directly at conordonelan@gmail.com.";
+        submitBtn.disabled = false;
+      }
+    });
+  </script>
+</body>
+</html>
