@@ -5,8 +5,8 @@
 :root {
   --cream: #faf8ee;
   --red-tint: rgba(171, 51, 44, 0.08); /* translucent wash of the logo's brick red */
-  --leaf: #4a7c3f;
-  --leaf-dark: #3a6431;
+  --brand: #ab332c; /* logo brick red */
+  --brand-dark: #8c2a24;
   --sun: #e0a83e;
   --clay: #a0512a;
   --ink: #2d3524;
@@ -49,14 +49,14 @@ img, svg { max-width: 100%; display: block; }
   transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
 }
 .btn--primary {
-  background: var(--leaf);
+  background: var(--brand);
   color: var(--cream);
-  box-shadow: 0 6px 20px rgba(74, 124, 63, 0.35);
+  box-shadow: 0 6px 20px rgba(171, 51, 44, 0.35);
 }
 .btn--primary:hover {
-  background: var(--leaf-dark);
+  background: var(--brand-dark);
   transform: translateY(-2px);
-  box-shadow: 0 10px 26px rgba(74, 124, 63, 0.45);
+  box-shadow: 0 10px 26px rgba(171, 51, 44, 0.45);
 }
 .btn--ghost {
   color: var(--ink);
@@ -95,10 +95,10 @@ img, svg { max-width: 100%; display: block; }
   color: var(--ink);
 }
 .nav__brand-mark img {
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  object-fit: cover;
+  height: 46px;
+  width: auto;
+  border-radius: 8px;
+  display: block;
 }
 .nav__brand-text {
   font-family: var(--font-display);
@@ -121,15 +121,15 @@ img, svg { max-width: 100%; display: block; }
   font-size: 0.98rem;
   transition: color 0.2s ease;
 }
-.nav__menu a:hover { color: var(--leaf); }
+.nav__menu a:hover { color: var(--brand); }
 .nav__menu a.nav__cta {
-  background: var(--leaf);
+  background: var(--brand);
   color: var(--cream);
   padding: 0.55em 1.3em;
   border-radius: 999px;
   font-weight: 600;
 }
-.nav__menu a.nav__cta:hover { background: var(--leaf-dark); }
+.nav__menu a.nav__cta:hover { background: var(--brand-dark); }
 
 .nav__toggle {
   display: none;
@@ -247,7 +247,7 @@ img, svg { max-width: 100%; display: block; }
   text-transform: uppercase;
   letter-spacing: 0.14em;
   font-size: 0.82rem;
-  color: var(--leaf);
+  color: var(--brand);
   margin-bottom: 0.5rem;
 }
 .section__title {
@@ -293,7 +293,7 @@ img, svg { max-width: 100%; display: block; }
   font-family: var(--font-display);
   font-weight: 900;
   font-size: 2.4rem;
-  color: var(--leaf);
+  color: var(--brand);
   line-height: 1;
 }
 .fact-card__label {
@@ -399,7 +399,7 @@ img, svg { max-width: 100%; display: block; }
   object-fit: contain;
 }
 /* white-only logo artwork needs a dark ground */
-.client-logo--dark { background: var(--leaf-dark); }
+.client-logo--dark { background: var(--brand-dark); }
 
 /* ============ Contact ============ */
 .contact { position: relative; overflow: hidden; }
@@ -407,7 +407,7 @@ img, svg { max-width: 100%; display: block; }
   position: absolute;
   width: 40vw; height: 40vw;
   min-width: 300px; min-height: 300px;
-  background: rgba(74, 124, 63, 0.12);
+  background: rgba(171, 51, 44, 0.12);
   border-radius: 55% 45% 40% 60% / 45% 55% 45% 55%;
   right: -12%;
   bottom: -30%;
@@ -435,7 +435,7 @@ img, svg { max-width: 100%; display: block; }
   gap: 0.7rem;
 }
 .contact__links a {
-  color: var(--leaf);
+  color: var(--brand);
   font-weight: 600;
   text-decoration: none;
 }
@@ -455,7 +455,7 @@ img, svg { max-width: 100%; display: block; }
   gap: 0.5rem;
 }
 .site-footer a { color: var(--ink-soft); text-decoration: none; }
-.site-footer a:hover { color: var(--leaf); }
+.site-footer a:hover { color: var(--brand); }
 
 /* ============ Scroll reveal ============ */
 .reveal {
