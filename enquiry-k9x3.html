@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Project Enquiry — Glad Animal Movements</title>
+  <title>Project Brief — Glad Animal Movements</title>
   <meta name="robots" content="noindex, nofollow">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,59 +28,128 @@
     <section class="section enquiry">
       <div class="container enquiry__inner">
         <div class="section__head">
-          <p class="section__kicker">Project Enquiry</p>
-          <h1 class="section__title">Tell us about your project</h1>
-          <p class="enquiry__sub">A few details and we'll come back to you within one working day.</p>
+          <p class="section__kicker">Project Brief</p>
+          <h1 class="section__title">Thank you for reaching out about your video project!</h1>
+          <p class="enquiry__sub">To accurately assess my availability and provide a realistic timeline, please answer the questions below. As an independent producer, a clear brief upfront is the best way to determine if I can take on your project and give it the focused attention it deserves.</p>
         </div>
 
         <form id="enquiry-form" class="enquiry__form" novalidate>
-          <div class="field">
-            <label for="f-name">Your name *</label>
-            <input id="f-name" name="name" type="text" required autocomplete="name">
-          </div>
-          <div class="field">
-            <label for="f-email">Email *</label>
-            <input id="f-email" name="email" type="email" required autocomplete="email">
-          </div>
-          <div class="field">
-            <label for="f-phone">Phone</label>
-            <input id="f-phone" name="phone" type="tel" autocomplete="tel">
-          </div>
-          <div class="field">
-            <label for="f-org">Company / organisation</label>
-            <input id="f-org" name="organisation" type="text" autocomplete="organization">
-          </div>
-          <div class="field">
-            <label for="f-type">Type of project</label>
-            <select id="f-type" name="projectType">
-              <option value="">Choose one…</option>
-              <option>Corporate / promotional video</option>
-              <option>Event coverage</option>
-              <option>Biodiversity / heritage documentary</option>
-              <option>Arts / community project</option>
-              <option>Social media content</option>
-              <option>Livestream</option>
-              <option>Other</option>
-            </select>
-          </div>
-          <div class="field">
-            <label for="f-date">Ideal delivery date</label>
-            <input id="f-date" name="deliveryDate" type="date">
-          </div>
-          <div class="field field--full">
-            <label for="f-details">Project details *</label>
-            <textarea id="f-details" name="details" rows="6" required placeholder="What's the story you want to tell? Where and when does it happen?"></textarea>
-          </div>
+
+          <fieldset class="enquiry__section">
+            <legend>About you</legend>
+            <div class="enquiry__grid">
+              <div class="field">
+                <label for="f-project">Project name *</label>
+                <input id="f-project" name="projectName" type="text" required>
+              </div>
+              <div class="field">
+                <label for="f-name">Point of contact *</label>
+                <input id="f-name" name="contactName" type="text" required autocomplete="name">
+              </div>
+              <div class="field">
+                <label for="f-email">Email *</label>
+                <input id="f-email" name="email" type="email" required autocomplete="email">
+              </div>
+              <div class="field">
+                <label for="f-phone">Phone</label>
+                <input id="f-phone" name="phone" type="tel" autocomplete="tel">
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="enquiry__section">
+            <legend>🎥 The Core Idea &amp; Purpose</legend>
+            <div class="enquiry__grid">
+              <div class="field field--full">
+                <label for="f-purpose">What is the video for?</label>
+                <p class="field__hint">e.g. Marketing a new product, Internal communication, Fundraising, Event promotion, Brand awareness</p>
+                <input id="f-purpose" name="purpose" type="text">
+              </div>
+              <div class="field field--full">
+                <label for="f-audience">Who will be watching the video?</label>
+                <p class="field__hint">e.g. Potential customers, Existing employees, Event attendees, Industry peers — please be specific about age/demographic if possible</p>
+                <input id="f-audience" name="audience" type="text">
+              </div>
+              <div class="field field--full">
+                <label for="f-story">What is the main story or message the video needs to tell? *</label>
+                <textarea id="f-story" name="story" rows="4" required></textarea>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="enquiry__section">
+            <legend>🎯 Deliverables &amp; Technical Details</legend>
+            <div class="enquiry__grid">
+              <div class="field field--full">
+                <label for="f-deliverables">What are the final deliverables?</label>
+                <p class="field__hint">e.g. One 30-second social media clip, One 3-minute event recap, A series of 5 short testimonial videos</p>
+                <input id="f-deliverables" name="deliverables" type="text">
+              </div>
+              <div class="field">
+                <label for="f-hosting">Where will the video be hosted/shown?</label>
+                <p class="field__hint">e.g. YouTube, Company Website, Instagram/TikTok, Conference presentation, Internal use only</p>
+                <input id="f-hosting" name="hosting" type="text">
+              </div>
+              <div class="field">
+                <label for="f-aspect">Required aspect ratio or resolution?</label>
+                <p class="field__hint">e.g. 16:9 Landscape for YouTube, 9:16 Vertical for Reels/TikTok, Square 1:1 for LinkedIn/Instagram</p>
+                <input id="f-aspect" name="aspectRatio" type="text">
+              </div>
+              <div class="field field--full">
+                <label for="f-assets">Do you have any existing assets or branding guidelines?</label>
+                <input id="f-assets" name="assets" type="text">
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="enquiry__section">
+            <legend>⏰ Proposed Timelines &amp; Budget</legend>
+            <div class="enquiry__grid">
+              <div class="field">
+                <label for="f-date">What is your ideal final delivery date?</label>
+                <input id="f-date" name="deliveryDate" type="date">
+              </div>
+              <div class="field">
+                <label for="f-budget">What is your target budget for this entire production?</label>
+                <p class="field__hint">A realistic budget helps me scope the project appropriately and suggest the best approach.</p>
+                <input id="f-budget" name="budget" type="text">
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="enquiry__section">
+            <legend>📋 Production Logistics</legend>
+            <div class="enquiry__grid">
+              <div class="field field--full">
+                <label for="f-locations">Are there filming locations required? If so, where are they?</label>
+                <p class="field__hint">Please list all potential locations — travel time is a key factor in scheduling.</p>
+                <textarea id="f-locations" name="locations" rows="3"></textarea>
+              </div>
+              <div class="field">
+                <label for="f-talent">How many people (talent/speakers) will need to be filmed?</label>
+                <p class="field__hint">e.g. One CEO interview, Two hosts, A crowd of 100 attendees</p>
+                <input id="f-talent" name="talentCount" type="text">
+              </div>
+              <div class="field">
+                <label for="f-inspiration">Links to inspiration (if any)</label>
+                <input id="f-inspiration" name="inspiration" type="text">
+              </div>
+            </div>
+          </fieldset>
+
           <!-- honeypot: real people never see or fill this -->
           <div class="field field--hp" aria-hidden="true">
             <label for="f-website">Website</label>
             <input id="f-website" name="website" type="text" tabindex="-1" autocomplete="off">
           </div>
-          <div class="field field--full">
-            <button type="submit" class="btn btn--primary btn--big" id="enquiry-submit">Send enquiry</button>
+
+          <div class="field field--full enquiry__submit-row">
+            <button type="submit" class="btn btn--primary btn--big" id="enquiry-submit">Send brief</button>
             <p class="enquiry__status" id="enquiry-status" role="status"></p>
           </div>
         </form>
+
+        <p class="enquiry__outro">Once I receive your answers, I can assess my current schedule and provide you with a proposal, availability confirmation, and a fixed quote.<br><br>Thank you,<br><strong>Conor Donelan</strong><br>GAM Creative</p>
       </div>
     </section>
   </main>
@@ -114,9 +183,9 @@
         });
         if (!res.ok) throw new Error("Request failed: " + res.status);
         form.reset();
-        statusEl.textContent = "Thanks! Your enquiry is on its way — we'll be in touch within one working day.";
+        statusEl.textContent = "Thanks! Your brief is on its way — I'll be in touch soon.";
       } catch (err) {
-        statusEl.textContent = "Something went wrong sending the form. You can email us directly at conordonelan@gmail.com.";
+        statusEl.textContent = "Something went wrong sending the form. You can email me directly at conordonelan@gmail.com.";
         submitBtn.disabled = false;
       }
     });
