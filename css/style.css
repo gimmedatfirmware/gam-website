@@ -399,6 +399,20 @@ img, svg { max-width: 100%; display: block; }
   margin-bottom: 0.6rem;
 }
 .work-card p { color: var(--ink-soft); font-size: 0.95rem; }
+.work-card__films {
+  list-style: none;
+  margin: 0.5rem 0 0.3rem;
+  display: grid;
+  gap: 0.35rem;
+}
+.work-card__films a {
+  color: var(--brand);
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+}
+.work-card__films a:hover { text-decoration: underline; }
+
 .work-card__year {
   display: block;
   margin-top: 0.7rem;
