@@ -452,6 +452,18 @@ img, svg { max-width: 100%; display: block; }
 }
 /* white-only logo artwork needs a dark ground */
 .client-logo--dark { background: var(--brand-dark); }
+/* square icon marks can use a little more height */
+.client-logo--tall img { max-height: 72px; border-radius: 12px; }
+/* name labels for marks that aren't self-identifying */
+.client-logo__label {
+  margin-top: 0.5rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+  text-align: center;
+  line-height: 1.25;
+}
+.client-logo:has(.client-logo__label) img { max-height: 56px; }
 
 /* ============ Testimonials ============ */
 .quotes__grid {
