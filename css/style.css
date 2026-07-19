@@ -357,7 +357,6 @@ img, svg { max-width: 100%; display: block; }
   transform: translateY(-5px);
   box-shadow: var(--shadow);
 }
-.service-card__icon { font-size: 2rem; margin-bottom: 0.9rem; }
 .service-card h3 {
   font-family: var(--font-display);
   font-weight: 700;
