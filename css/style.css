@@ -103,10 +103,10 @@ img, svg { max-width: 100%; display: block; }
 }
 .nav__brand-text {
   font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 0.95rem;
+  font-weight: 400;
+  font-size: 1.5rem;
   line-height: 1.15;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.02em;
 }
 
 .nav__menu {
