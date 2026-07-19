@@ -214,7 +214,7 @@ img, svg { max-width: 100%; display: block; }
 .hero__title {
   font-family: var(--font-display);
   font-weight: 400;
-  font-size: clamp(2.4rem, 5.4vw, 4.2rem);
+  font-size: clamp(1.9rem, 3.2vw, 2.7rem);
   line-height: 1.06;
   letter-spacing: -0.01em;
   margin-bottom: 1.3rem;
