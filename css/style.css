@@ -454,6 +454,58 @@ img, svg { max-width: 100%; display: block; }
 /* white-only logo artwork needs a dark ground */
 .client-logo--dark { background: var(--brand-dark); }
 
+/* ============ Testimonials ============ */
+.quotes__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.4rem;
+}
+.quote-card {
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 2rem 1.9rem 1.7rem;
+  box-shadow: 0 4px 18px rgba(45, 53, 36, 0.06);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.quote-card::before {
+  content: "“";
+  position: absolute;
+  top: 0.4rem;
+  left: 1.1rem;
+  font-family: var(--font-display);
+  font-size: 3.2rem;
+  font-weight: 800;
+  color: var(--sun);
+  line-height: 1;
+}
+.quote-card p {
+  font-size: 0.98rem;
+  line-height: 1.6;
+  color: var(--ink-soft);
+  margin: 0.8rem 0 1.2rem;
+  flex: 1;
+}
+.quote-card footer { border-top: 1px solid rgba(45, 53, 36, 0.08); padding-top: 0.9rem; }
+.quote-card cite {
+  display: block;
+  font-style: normal;
+  font-weight: 700;
+  color: var(--ink);
+}
+.quote-card footer span {
+  display: block;
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+}
+.quote-card__projects {
+  margin-top: 0.25rem;
+  font-style: italic;
+  font-size: 0.8rem !important;
+  color: var(--clay) !important;
+}
+
 /* ============ Contact ============ */
 .contact { position: relative; overflow: hidden; }
 .contact__blob {
@@ -715,6 +767,7 @@ img, svg { max-width: 100%; display: block; }
   .clients__logos { grid-template-columns: repeat(2, 1fr); }
   .client-logo { min-height: 90px; padding: 1rem; }
   .client-logo img { max-height: 52px; }
+  .quotes__grid { grid-template-columns: 1fr; }
   .contact__actions { flex-direction: column; align-items: stretch; }
   .contact__actions .btn { text-align: center; }
 }
