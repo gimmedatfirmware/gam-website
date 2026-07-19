@@ -188,7 +188,10 @@ img, svg { max-width: 100%; display: block; }
   );
 }
 
-.hero__inner { width: min(1120px, 92%); }
+.hero__inner {
+  width: 100%;
+  padding-inline: clamp(1.2rem, 3vw, 2.5rem);
+}
 
 .hero__copy {
   max-width: 40em;
