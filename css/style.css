@@ -8,6 +8,7 @@
   --brand: #ab332c; /* logo brick red */
   --brand-dark: #8c2a24;
   --sun: #e0a83e;
+  --saffron: #eb9722; /* buddhist-robe orange, turmeric-bright */
   --clay: #a0512a;
   --ink: #000000;
   --ink-soft: #3c3c3c;
@@ -158,8 +159,8 @@ img, svg { max-width: 100%; display: block; }
   position: relative;
   min-height: clamp(540px, 88vh, 900px);
   display: flex;
-  align-items: center;
-  padding-block: clamp(5rem, 10vw, 8rem);
+  align-items: flex-end;
+  padding-block: clamp(5rem, 10vw, 8rem) clamp(3rem, 6vw, 5rem);
   overflow: hidden;
   color: var(--cream);
 }
@@ -181,28 +182,35 @@ img, svg { max-width: 100%; display: block; }
   z-index: -1;
   background: linear-gradient(
     180deg,
-    rgba(20, 28, 16, 0.55) 0%,
-    rgba(20, 28, 16, 0.3) 45%,
-    rgba(20, 28, 16, 0.65) 100%
+    rgba(20, 28, 16, 0.3) 0%,
+    rgba(20, 28, 16, 0.12) 45%,
+    rgba(20, 28, 16, 0.4) 100%
   );
 }
 
 .hero__inner { width: min(1120px, 92%); }
 
-.hero__copy { max-width: 40em; }
+.hero__copy {
+  max-width: 40em;
+  background: rgba(16, 22, 14, 0.12);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  padding: clamp(1.5rem, 3vw, 2.2rem);
+  border-radius: var(--radius);
+}
 
 .hero__kicker {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.14em;
   font-size: 0.82rem;
-  color: var(--sun);
+  color: var(--saffron);
   margin-bottom: 1rem;
 }
 
 .hero__title {
   font-family: var(--font-display);
-  font-weight: 900;
+  font-weight: 400;
   font-size: clamp(2.4rem, 5.4vw, 4.2rem);
   line-height: 1.06;
   letter-spacing: -0.01em;
@@ -211,7 +219,7 @@ img, svg { max-width: 100%; display: block; }
 }
 .hero__title em {
   font-style: italic;
-  color: var(--sun);
+  color: var(--saffron);
 }
 
 .hero__sub {
@@ -330,7 +338,7 @@ img, svg { max-width: 100%; display: block; }
 }
 .fact-card__num {
   font-family: var(--font-display);
-  font-weight: 900;
+  font-weight: 400;
   font-size: 2.4rem;
   color: var(--brand);
   line-height: 1;
@@ -427,7 +435,7 @@ img, svg { max-width: 100%; display: block; }
 .clients__logos {
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 1.2rem;
 }
 .client-logo {
@@ -454,6 +462,8 @@ img, svg { max-width: 100%; display: block; }
 .client-logo--dark { background: var(--brand-dark); }
 /* square icon marks can use a little more height */
 .client-logo--tall img { max-height: 72px; border-radius: 12px; }
+/* detailed square logos that read small at standard size */
+.client-logo--big img { max-height: 104px; }
 /* name labels for marks that aren't self-identifying */
 .client-logo__label {
   margin-top: 0.5rem;
