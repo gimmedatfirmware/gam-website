@@ -228,10 +228,13 @@ img, svg { max-width: 100%; display: block; }
 
 .hero__sub {
   font-size: clamp(1.02rem, 1.6vw, 1.18rem);
-  color: rgba(250, 248, 238, 0.88);
+  color: rgba(250, 248, 238, 0.92);
   max-width: 34em;
   margin-bottom: 2rem;
   text-shadow: 0 1px 12px rgba(0, 0, 0, 0.3);
+  background: rgba(16, 22, 14, 0.45);
+  padding: 0.85em 1.1em;
+  border-radius: 14px;
 }
 
 .hero__actions {
